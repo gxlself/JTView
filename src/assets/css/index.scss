@@ -1,0 +1,26 @@
+@import './function';
+@import './base';
+@import './flex';
+
+#app {
+  background: #f5f5f5;
+  font: 14px/1.5 'SF Pro SC', 'SF Pro Display', 'PingFang SC', 'Segoe UI',
+    'SegoeUI', 'Microsoft YaHei', 'Helvetica Neue', 'Helvetica', 'Arial',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/** 栅格化 12格 **/
+@for $idx from 1 through 12 {
+  .lx-col-#{$idx} {
+    @include pc{
+      width: $pc * $idx;
+    }
+    @include pad{
+      width: $pad * $idx;
+    }
+    @include mobile{
+      width: $mobile * $idx;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+@import '@/assets/css/function.scss';
+
+.amp-login{
+	min-height: 100vh;
+	background: url('../../assets/image/amp-back.webp') center no-repeat;
+	background-size: cover;
+	@include mobile{
+		background: #f6f6f6;
+	}
+	&-content{
+		flex: 1;
+		@include mobile{
+			display: none;
+		}
+	}
+	&-module{
+			width: 360px;
+			padding: 32px 24px 45px;
+			box-sizing: border-box;
+			background: rgba(255,255,255,1);
+			box-shadow: 0px 10px 40px 0px rgba(0,0,0,0.2);
+			border-radius: 4px;
+	}
+	&-form{
+			margin-top: 32px;
+			@include mobile{
+				margin-top: 80px;
+				padding: 0 20px;
+			}
+	}
+	&-remember{
+			margin-top: 43px;
+			font-size: 14px;
+			color: #8C8985;
+	}
+	&-button{
+			width: 100%;
+			margin-top: 21px;
+			@include mobile{
+				height: 45px;
+				margin: 144px auto 2.5px;
+			}
+	}
+	&-mobile{
+		@include pc{
+			display: none;
+		}
+		@include pad{
+			display: none;
+		}
+		h3{
+			padding: 20px;
+			background: #ffffff;
+		}
+	}
+	.amp-login-button.el-button{
+		@include mobile{
+			font-size: 14px;
+		}
+	}
+}

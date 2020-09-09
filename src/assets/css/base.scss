@@ -1,0 +1,66 @@
+// 栅格宽度 变量
+$pc: 96px;
+$pad: 56px;
+$mobile: 100vw / 12;
+// 字体
+$baseCnFont: "Microsoft YaHei", "SF Pro SC", "SF Pro Display", "PingFang SC", "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+$baseFont: "Barlow-Regular", #{$baseCnFont};
+$RG: RG(Barlow-Regular);
+$MG: MG(Barlow-Regular);
+$en: 1.08em;
+
+body, body > div, body > input,textarea {
+    font-family: $RG, $baseFont;
+    font-size: 16px;
+}
+html, body{
+    overflow: hidden;
+}
+html, body, ul, ol, li, p{
+    padding: 0;
+    margin: 0;
+}
+ul, ol, li {
+    list-style: none;
+}
+
+@function RG($enfont){
+    @return $enfont + ', "fz-regular", ' + $baseCnFont;
+}
+
+@function MG($enfont){
+    @return $enfont + ', "fz-bold", ' + $baseCnFont;
+}
+
+@font-face {
+    font-family: Barlow-Regular;
+    src: url(https://s.ampmake.com/www/css/Barlow-Regular.woff2) format("woff2"), url(https://s.ampmake.com/www/css/Barlow-Regular.woff) format("woff");
+}
+
+@font-face {
+    font-family: Barlow-Medium;
+    src: url(https://s.ampmake.com/www/css/Barlow-Medium.woff2) format("woff2"), url(https://s.ampmake.com/www/css/Barlow-Medium.woff) format("woff");
+}
+
+@font-face {
+    font-family: Barlow-SemiBold;
+    src: url(https://s.ampmake.com/www/css/Barlow-SemiBold.woff2) format("woff2"), url(https://s.ampmake.com/www/css/Barlow-SemiBold.woff) format("woff");
+}
+
+@font-face {
+    font-family: BarlowC-Regular;
+    src: url(https://s.ampmake.com/www/css/BarlowCondensed-Regular.woff2) format("woff2"), url(https://s.ampmake.com/www/css/BarlowCondensed-Regular.woff) format("woff");
+}
+@font-face {
+    font-family: BarlowC-Medium;
+    src: url(https://s.ampmake.com/www/css/BarlowCondensed-Medium.woff2) format("woff2"), url(https://s.ampmake.com/www/css/BarlowCondensed-Medium.woff) format("woff");
+}
+@font-face {
+    font-family: BarlowC-SemiBold;
+    src: url(https://s.ampmake.com/www/css/BarlowCondensed-SemiBold.woff2) format("woff2"), url(https://s.ampmake.com/www/css/BarlowCondensed-SemiBold.woff) format("woff");
+}
+
+@font-face {
+    font-family: Helvetica-Bold;
+    src: url(https://s.ampmake.com/www/css/Helvetica-Bold.woff2) format("woff2"), url(https://s.ampmake.com/www/css/Helvetica-Bold.woff) format("woff");
+}

@@ -1,0 +1,56 @@
+{
+  "name": "jtview",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start:local": "vue-cli-service serve --mode local",
+    "start:dev": "vue-cli-service serve --mode dev",
+    "start:test": "vue-cli-service serve --mode test",
+    "start:ontest": "vue-cli-service serve --mode ontest",
+    "start:prd": "vue-cli-service serve --mode prod",
+    "serve": "node ./serve/app.js & npm run start:dev"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6.5",
+    "js-base64": "^3.4.1",
+    "js-cookie": "^2.2.0",
+    "koa-route": "^3.2.0",
+    "three": "^0.117.1",
+    "vue-jstree": "^2.1.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.4.0",
+    "@vue/cli-plugin-eslint": "^4.4.0",
+    "@vue/cli-service": "^4.4.0",
+    "@vue/eslint-config-standard": "^5.1.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "4.2.1",
+    "koa-helmet": "4.2.0",
+    "koa-logger": "3.2.0",
+    "koa-static": "5.0.0",
+    "koa2-connect": "1.0.2",
+    "lint-staged": "^9.5.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

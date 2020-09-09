@@ -1,0 +1,60 @@
+.chj-input {
+    position: relative;
+}
+
+.chj-input-tips {
+    position: absolute;
+    font-size: 12px;
+    line-height: 20px;
+    color: #FF0000;
+}
+
+.chj-input-title {
+    margin-bottom: 7px;
+    font-size: 14px;
+    line-height: 28px;
+    color: #8C8985;
+    @media (max-width: 720px) {
+        color: #2F2F2F;
+        font-size: 15px;
+        line-height: 20px;
+    }
+}
+
+.chj-input-input {
+    input, textarea {
+        padding: 6px 0;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid #D8D8D8;
+        color: #222;
+        font-size: 16px;
+        line-height: 30px;
+        caret-color:#4595FB;
+        outline: none;
+        @media (max-width: 720px) {
+            font-size: 14px;
+            background: none;
+            border-bottom-color: #DDDDDD;
+            font-family: "Barlow-Regular", "Microsoft YaHei", "SF Pro SC", "SF Pro Display", "PingFang SC", "Segoe UI", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+        }
+        &:focus {
+            border-color: #4595FB;
+        }
+        &.error {
+            border-color: #FF0000;
+        }
+
+        &::placeholder {
+            color: #D4D4D2;
+            @media (max-width: 720px) {
+                color: #999999;
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.chj-input+.chj-input{
+    margin-top: 14px;
+}
